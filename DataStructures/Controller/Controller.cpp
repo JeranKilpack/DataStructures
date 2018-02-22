@@ -12,20 +12,39 @@ using namespace std;
 
 void Controller :: start()
 {
-    cout << "Testing the Timer class" << endl;
-    Timer codeTimer;
-    codeTimer.startTimer();
-    cout << "Print to the screen show text" << endl;
-    codeTimer.stopTimer();
-    codeTimer.displayInformation();
+    ArrayTester myTest;
+    myTest.testArrayUse();
+    myTest.testAdvanceArray();
+
     
-    codeTimer.resetTimer();
-    codeTimer.startTimer();
-    for (int index = 0; index < 10000; index++)
+//   findMaxAndMin();
+//
+//   testArray();
+}
+
+void Controller :: findMaxAndMin()
+{
+    Timer searchTimer;
+    searchTimer.startTimer();
+    vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/jkil3536/Documents/Data Structures/DataStructures/DataStructures/Data/crime.csv");
+    
+    int minIndex = 0;
+    int maxIndex = 0;
+    
+    for (int index = 0; index < myData.size(); index++)
     {
-        cout << "The index is " << index << "\t";
+       if (myData [minIndex] > myData [index])
+       {
+           minIndex = index;
+       }
+        
+       if (myData [maxIndex] > myData[index])
+       {
+            maxIndex = index;
+       }
     }
-    codeTimer.stopTimer();
-    codeTimer.displayInformation();
-    
+    searchTimer.stopTimer();
+    cout << "The smallest Crime stat is at " << minIndex << " and it is: " << myData[minIndex] << endl;
+    cout << "The largest Crime stat is at " << maxIndex << " and it is: " << myData[maxIndex] << endl;
+    searchTimer.displayInformation();
 }

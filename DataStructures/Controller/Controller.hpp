@@ -9,18 +9,20 @@
 #ifndef Controller_hpp
 #define Controller_hpp
 
-#include "Tools/Timer.hpp"
-
 #include <iostream>
 #include <vector>
-
-
+#include "Tools/Timer.hpp"
+#include "FileController.hpp"
+#include "../Model/Structures/Array.hpp"
+#include "../Testers/ArrayTester.hpp"
 
 class Controller
 {
+private:
+    void findMaxAndMin();
 public:
     void start();
-};
 
+};
 #endif /* Controller_hpp */
 
