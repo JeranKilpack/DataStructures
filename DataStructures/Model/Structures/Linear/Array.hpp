@@ -37,7 +37,7 @@ public:
     //Methods
     int getSize() const;
     Type getFromIndex(int index);
-    void setAnIndex(int index, Type data);
+    void setAtIndex(int index, Type data);
 };
 
 template <class Type>
@@ -63,6 +63,7 @@ Array<Type> :: Array(const Array<Type> & toCopy)
     }
     
 }
+
 template <class Type>
 Array<Type> :: ~Array()
 {

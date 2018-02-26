@@ -30,19 +30,25 @@ LinearNode<Type> :: LinearNode() : Node<Type>()
 {
     this->next = nullptr;
 }
+
 //this constructor is used to create a refrence to a instance with data.
+
 template <class Type>
 LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
 {
     this->next = nullptr;
 }
+
 // this constructor is used to create a refrence to a instance with data and a known link.
+
 template <class Type>
 LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(data)
 {
     this->next = next;
 }
+
 //Acessor methods
+
 template <class Type>
 void LinearNode<Type> :: setNextNode(LinearNode<Type> * nextNodePointer )
 {

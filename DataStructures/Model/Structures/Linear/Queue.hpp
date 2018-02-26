@@ -110,6 +110,7 @@ void Queue<Type> :: clear()
     while(this->front != nullptr)
     {
         cout << dequeue() << end;
+    }
 }
     
 template <class Type>

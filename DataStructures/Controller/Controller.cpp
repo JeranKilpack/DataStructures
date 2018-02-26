@@ -14,7 +14,7 @@ void Controller :: start()
 {
     ArrayTester myTest;
     myTest.testArrayUse();
-    myTest.testAdvanceArray();
+    myTest.testAdvancedArray();
 
     
 //   findMaxAndMin();

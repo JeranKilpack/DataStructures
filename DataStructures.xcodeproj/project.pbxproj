@@ -35,6 +35,7 @@
 		972899B8202A119800128555 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		97502D0D202227CB00390C9D /* CrimeData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
 		97502D0E202227DF00390C9D /* CrimeData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
+		97780AAB20445FDA0077FFF8 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 		977D73E9203C710400DD4871 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		977D73EC203C7ECB00DD4871 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		977D73EE203C869800DD4871 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 			children = (
 				972899B8202A119800128555 /* Node.hpp */,
 				977D73E9203C710400DD4871 /* LinearNode.hpp */,
+				97780AAB20445FDA0077FFF8 /* DoubleNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
