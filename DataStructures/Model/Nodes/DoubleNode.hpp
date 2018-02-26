@@ -15,7 +15,7 @@ class DoubleNode : public Node<Type>
 {
 
 protected:
-    DoubleNode<Type> * previous:
+    DoubleNode<Type> * previous;
     DoubleNode<Type> * next;
     
 public:
