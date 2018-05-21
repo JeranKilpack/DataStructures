@@ -15,7 +15,7 @@
 		97A391792022102500E54C2B /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A391772022102500E54C2B /* Timer.cpp */; };
 		97A3917C2022216900E54C2B /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A3917A2022216900E54C2B /* FileController.cpp */; };
 		97B4155D206D3C8D00DA63BD /* BinaryTreeTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B4155B206D3C8D00DA63BD /* BinaryTreeTester.cpp */; };
-		97C3055A204D900300C0323F /* RecursionTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C30558204D900300C0323F /* RecursionTester.cpp */; };
+		97BD6C6720B312EC000355A7 /* LinkedListTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97BD6C6520B312EC000355A7 /* LinkedListTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,7 +63,8 @@
 		97B41559206D3AE300DA63BD /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		97B4155B206D3C8D00DA63BD /* BinaryTreeTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTreeTester.cpp; sourceTree = "<group>"; };
 		97B4155C206D3C8D00DA63BD /* BinaryTreeTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeTester.hpp; sourceTree = "<group>"; };
-		97C30558204D900300C0323F /* RecursionTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecursionTester.cpp; sourceTree = "<group>"; };
+		97BD6C6520B312EC000355A7 /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
+		97BD6C6620B312EC000355A7 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
 		97C30559204D900300C0323F /* RecursionTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecursionTester.hpp; sourceTree = "<group>"; };
 		97E81615206A934B00F93DE5 /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
 		97E8AC92208E22FD0071A10E /* N_AnyTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = N_AnyTreeNode.hpp; sourceTree = "<group>"; };
@@ -105,9 +106,10 @@
 				976DD09920470EBF00AB5928 /* TestingStacksAndQueues.h */,
 				97B4155B206D3C8D00DA63BD /* BinaryTreeTester.cpp */,
 				97B4155C206D3C8D00DA63BD /* BinaryTreeTester.hpp */,
-				97C30558204D900300C0323F /* RecursionTester.cpp */,
 				97C30559204D900300C0323F /* RecursionTester.hpp */,
 				97104D6420653F4A009DC416 /* GraphTester.hpp */,
+				97BD6C6520B312EC000355A7 /* LinkedListTester.cpp */,
+				97BD6C6620B312EC000355A7 /* LinkedListTester.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -115,6 +117,7 @@
 		972899B6202A10BA00128555 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				97E81615206A934B00F93DE5 /* BinaryTreeNode.hpp */,
 				972899B8202A119800128555 /* Node.hpp */,
 				977D73E9203C710400DD4871 /* LinearNode.hpp */,
 				977FDDB520937469004210D9 /* HashNode.hpp */,
@@ -128,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				9780069720600225000CA8B5 /* Graph.hpp */,
-				97E81615206A934B00F93DE5 /* BinaryTreeNode.hpp */,
 				97B41553206D298E00DA63BD /* BinarySearchTree.hpp */,
 				977FDDB82093763D004210D9 /* Hashtable.hpp */,
 				97B41559206D3AE300DA63BD /* Tree.hpp */,
@@ -276,9 +278,9 @@
 				97B4155D206D3C8D00DA63BD /* BinaryTreeTester.cpp in Sources */,
 				97A3917220220C2800E54C2B /* Controller.cpp in Sources */,
 				97A3917420220C4C00E54C2B /* Runner.cpp in Sources */,
+				97BD6C6720B312EC000355A7 /* LinkedListTester.cpp in Sources */,
 				972899B5202A004200128555 /* ArrayTester.cpp in Sources */,
 				97A3917C2022216900E54C2B /* FileController.cpp in Sources */,
-				97C3055A204D900300C0323F /* RecursionTester.cpp in Sources */,
 				97564646205AB43800441812 /* SortingTester.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

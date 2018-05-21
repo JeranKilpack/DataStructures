@@ -8,7 +8,7 @@
 
 #ifndef LinearNode_hpp
 #define LinearNode_hpp
-
+#include "Node.hpp"
 #include <stdio.h>
 
 template <class Type>

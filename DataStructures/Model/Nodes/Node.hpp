@@ -6,12 +6,14 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#include "Node.hpp"
+
 #ifndef Node_hpp
 #define Node_hpp
 
-stuff<class Type>
-{
+template<class Type>
+class Node
+{protected:
+    Type data;
 public:
     Node();
     Node(Type data);
@@ -44,7 +46,6 @@ Type Node<Type> :: getData()
     return data;
 }
 
-template <class Type>
-class
+
 
 #endif /* Node_hpp */
