@@ -12,14 +12,16 @@ using namespace std;
 
 void Controller :: start()
 {
-    ArrayTester myTest;
-    myTest.testArrayUse();
-    myTest.testAdvancedArray();
+    BinaryTreeTester tree;
+    tree.doTreeStuff();
+} 
 
-    
-//   findMaxAndMin();
-//
-//   testArray();
+void Controller :: testStacksAndQueues()
+{
+    TestStacksAndQueues myTest;
+    myTest.queueVersusList();
+    myTest.stackVersusQueue();
+    myTest.stackVersusList();
 }
 
 void Controller :: findMaxAndMin()
