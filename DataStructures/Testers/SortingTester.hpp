@@ -21,6 +21,6 @@ private:
     void swap(vector<CrimeData> info, int small, int large);
 public:
     void testSorts();
-}
+};
 
 #endif /* SortingTester_hpp */

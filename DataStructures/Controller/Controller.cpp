@@ -12,17 +12,17 @@ using namespace std;
 
 void Controller :: start()
 {
-    BinaryTreeTester tree;
-    tree.doTreeStuff();
-} 
-
-void Controller :: testStacksAndQueues()
-{
-    TestStacksAndQueues myTest;
-    myTest.queueVersusList();
-    myTest.stackVersusQueue();
-    myTest.stackVersusList();
+//    BinaryTreeTester tree;
+//    tree.doTreeStuff();
 }
+//
+//void Controller :: testStacksAndQueues()
+//{
+//    TestStacksAndQueues myTest;
+//    myTest.queueVersusList();
+//    myTest.stackVersusQueue();
+//    myTest.stackVersusList();
+//}
 
 void Controller :: findMaxAndMin()
 {

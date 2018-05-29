@@ -11,7 +11,7 @@
 void LinkedListTester :: testListBasics()
 {
     LinkedList<int> numbers;
-    numbers.add(9)
+    numbers.add(9);
     cout << numbers.getFront()->getData() << " Is is at the front of the list and should be 9" << endl;
     cout << numbers.getEnd()->getData() << " Is at the end of the list and should be 9"<< endl;
     

@@ -46,7 +46,7 @@ void SortingTester :: testSorts()
 {
     Timer sortTimer;
     vector<CrimeData> data = FileController::readCrimeDataToVector("/Users/cody.henrichsen/Documents/Spring 2018 2420/DataStructures/DataStructures/Data/crime.csv");
-    
+    int swapCount = 0;
     sortTimer.startTimer();
     quickSort(data, 0, data.size());
     sortTimer.stopTimer();
@@ -54,4 +54,4 @@ void SortingTester :: testSorts()
     cout << "the number of swaps were: " << swapCount << endl;
     
 }
-}
+

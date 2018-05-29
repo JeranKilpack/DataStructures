@@ -1,18 +1,16 @@
 //
-//  BinaryTreeNode.h
+//  BinaryTreeNode.hpp
 //  DataStructures
 //
-//  Created by Kilpack, Jeran on 3/27/18.
+//  Created by Kilpack, Jeran on 5/25/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef Tree_hpp
-#define Tree_hpp
+#ifndef BinaryTreeNode_h
+#define BinaryTreeNode_h
 
 
 #include "Node.hpp"
-
-
 template <class Type>
 class BinaryTreeNode : public Node<Type>
 {
@@ -32,11 +30,19 @@ public:
     BinaryTreeNode<Type> * getRootNode();
     BinaryTreeNode<Type> * getLeftNode();
     BinaryTreeNode<Type> * getRightNode();
-    
 };
+
 
 template <class Type>
 BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
+{
+    root = nullptr;
+    right = nullptr;
+    left = nullptr;
+}
+
+template <class Type>
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
 {
     root = nullptr;
     right = nullptr;
@@ -73,4 +79,5 @@ void BinaryTreeNode<Type> :: setRightNode(BinaryTreeNode<Type> * newRoot)
     right = newRoot;
 }
 
-#endif
+
+#endif /* BinaryTreeNode_h */

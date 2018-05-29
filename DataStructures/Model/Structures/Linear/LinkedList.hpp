@@ -15,7 +15,7 @@ using namespace std;
 
 template <class Type>
 class LinkedList : public List<Type>
-
+{
 protected:
 
 LinearNode<Type> * front;
@@ -36,14 +36,17 @@ void add(Type item);
 void addAtIndex(int index, Type item);
 Type getFromIndex(int index);
 Type remove(int index);
+};
 
+
+template <class Type>
 LinkedList<Type> :: LinkedList()
 {
     this->front = nullptr;
     this->end = nullptr;
     this->size = 0;
 }
-
+template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
@@ -54,7 +57,7 @@ LinkedList<Type> :: ~LinkedList()
         destroyStructure = front;
     }
 }
-
+template <class Type>
 void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
@@ -72,7 +75,7 @@ void LinkedList<Type> :: add(Type item)
     
     this->size += 1;
 }
-
+template <class Type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
@@ -98,12 +101,12 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
                 current = current->getNextNode();
             }
             previous->setNextNode(toBeAdded);
-            toBeAdded->SetNextNode(current);
+            toBeAdded->setNextNode(current);
         }
         this->size++;
     }
 }
-
+template <class Type>
 Type LinkedList<Type> :: getFromIndex(int index)
 {
     assert(index >= 0 && index < this->size);
@@ -120,7 +123,7 @@ Type LinkedList<Type> :: getFromIndex(int index)
     
     return data;
 }
-
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size);
@@ -163,25 +166,21 @@ Type LinkedList<Type> :: remove(int index)
     delete toBeRemoved;
     return removedData;
 }
-
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
     return this->end;
 }
-
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getFront()
 {
     return this->front;
 }
-
+template <class Type>
 int LinkedList<Type> :: getSize() const
 {
     return this->size;
 }
 
-virtual void add(Type item);
-virtual void addAtIndex(int index, Type item);
-virtual Type getFromIndex(int index);
-virtual Type remove(int index);
 
 #endif /* LinkedList_hpp */

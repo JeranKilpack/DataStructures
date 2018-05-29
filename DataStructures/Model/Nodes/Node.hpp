@@ -12,7 +12,8 @@
 
 template<class Type>
 class Node
-{protected:
+{
+protected:
     Type data;
 public:
     Node();
@@ -24,8 +25,6 @@ public:
 template <class Type>
 Node<Type> :: Node()
 {
-    
-    
 }
 
 template <class Type>
