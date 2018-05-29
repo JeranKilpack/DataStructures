@@ -14,6 +14,18 @@ void Controller :: start()
 {
 //    BinaryTreeTester tree;
 //    tree.doTreeStuff();
+  
+    LinkedListTester myTest;
+    
+    myTest.testListBasics();
+    myTest.testListWithData();
+    
+    // vector<CrimeData> myData = FileController:: readCrimeDataToVector("/Users/jkil3536/Documents/Data Structures/DataStructures/DataStructures/Data/crime.csv");
+    
+  //  for(int loop = 200; loop < 216; loop++)
+   // {
+   //     cout << "Spot# " << loop << "; " << myData[loop] << endl;
+   // }
 }
 //
 //void Controller :: testStacksAndQueues()
