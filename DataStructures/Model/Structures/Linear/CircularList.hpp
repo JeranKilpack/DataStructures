@@ -33,7 +33,7 @@ public:
     //Unused
     LinearNode<Type>* getFront();
     LinearNode<Type>* getEnd();
-}
+};
 
 template <class Type>
 CircularList<Type> :: CircularList()
