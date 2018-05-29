@@ -6,8 +6,8 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef CircularList_h
-#define CircularList_h
+#ifndef CircularList_hpp
+#define CircularList_hpp
 
 #include "List.hpp"
 #include "../../Nodes/DoubleNode.hpp"
@@ -38,11 +38,9 @@ public:
 template <class Type>
 CircularList<Type> :: CircularList()
 {
-    front->setPrevious(end);
-    front->setNext(end);
-    
-    end->setPrevious(front);
-    end->setNext(front);
+    front = nullptr;
+    end = nullptr;
+    this->size = 0;
 }
 
 template <class Type>
