@@ -9,21 +9,26 @@
 #ifndef Controller_hpp
 #define Controller_hpp
 
-#include <iostream>
-#include <vector>
 #include "Tools/Timer.hpp"
 #include "FileController.hpp"
 #include "../Model/Structures/Linear/Array.hpp"
 #include "../Testers/ArrayTester.hpp"
-#include "../Testers/LinkedListTester.hpp"
+#include "../Testers/RecursionTester.hpp"
+#include "../Testers/SortingTester.hpp"
+#include "../Testers/GraphTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
+
+#include <iostream>
+#include <vector>
 
 class Controller
 {
 private:
     void findMaxAndMin();
 public:
+    Controller();
     void start();
-
+    void testTimer();
 };
-#endif /* Controller_hpp */
 
+#endif /* Controller_hpp */

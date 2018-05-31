@@ -22,4 +22,4 @@ private:
 public:
     void testGraphs();
 };
-#endif /* GraphTester_h */
+#endif /* GraphTester_hpp */

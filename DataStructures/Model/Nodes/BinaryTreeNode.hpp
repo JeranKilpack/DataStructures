@@ -6,8 +6,8 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef BinaryTreeNode_h
-#define BinaryTreeNode_h
+#ifndef BinaryTreeNode_hpp
+#define BinaryTreeNode_hpp
 
 
 #include "Node.hpp"
