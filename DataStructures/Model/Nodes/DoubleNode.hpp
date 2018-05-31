@@ -5,15 +5,15 @@
 //  Created by Kilpack, Jeran on 2/26/18.
 //  Copyright © 2018 CTEC. All rights reserved.
 //
+
 #include "Node.hpp"
 
-#ifndef DoubleNode_h
-#define DoubleNode_h
+#ifndef DoubleNode_hpp
+#define DoubleNode_hpp
 
 template <class Type>
 class DoubleNode : public Node<Type>
 {
-
 protected:
     DoubleNode<Type> * previous;
     DoubleNode<Type> * next;
@@ -28,7 +28,7 @@ public:
     
     void setPrevious(DoubleNode<Type> * previous);
     void setNext(DoubleNode<Type> * next);
-}
+};
 
 template <class Type>
 DoubleNode<Type> :: DoubleNode() : Node<Type>()
@@ -37,6 +37,7 @@ DoubleNode<Type> :: DoubleNode() : Node<Type>()
     next = nullptr;
 }
 
+
 template <class Type>
 DoubleNode<Type> :: DoubleNode(Type data) : Node<Type>(data)
 {
@@ -44,29 +45,26 @@ DoubleNode<Type> :: DoubleNode(Type data) : Node<Type>(data)
     next = nullptr;
 }
 
+
 template <class Type>
-DoubleNode<Type> :: DoubleNode(Type data, DoubleNode<Type> *previous, DoubleNode<Type>* next) : Node<Type>(data)
+DoubleNode<Type> :: DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNode<Type> * next) : Node<Type>(data)
 {
     this->previous = previous;
     this->next = next;
 }
 
+//Accessor methods
+
 template <class Type>
-void DoubleNode<Type> :: setNext(DoubleNode<Type>* next)
+void DoubleNode<Type> :: setNext(DoubleNode<Type> * next)
 {
     this->next = next;
 }
 
 template <class Type>
-void DoubleNode<Type> :: setPrevious(DoubleNode<Type>* previous)
+void DoubleNode<Type> :: setNext(DoubleNode<Type> * previous)
 {
     this->previous = previous;
-}
-
-template <class Type>
-DoubleNode<Type> * DoubleNode<Type> :: getPrevious()
-{
-    return previous;
 }
 
 template <class Type>
@@ -75,4 +73,9 @@ DoubleNode<Type> * DoubleNode<Type> :: getNext()
     return next;
 }
 
-#endif /* DoubleNode_h */
+template <class Type>
+DoubleNode<Type> * DoubleNode<Type> :: getPrevious()
+{
+    return previous;
+}
+#endif /* DoubleNode_hpp */
