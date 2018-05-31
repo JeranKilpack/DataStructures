@@ -64,12 +64,6 @@ Graph<Type> :: Graph()
     this->vertexCount = 0;
 }
 
-/*
- Since we cannot "remove" from an array in C++
- we only implement adding to a graph.
- Java allows for all objects to be set to null but C++
- does not.
- */
 
 template <class Type>
 int Graph<Type> :: size() const

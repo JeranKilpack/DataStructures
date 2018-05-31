@@ -71,8 +71,6 @@
 		97BD6C6620B312EC000355A7 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
 		97C30559204D900300C0323F /* RecursionTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecursionTester.hpp; sourceTree = "<group>"; };
 		97E0D64920BD9DD900AA8B7E /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
-		97E81615206A934B00F93DE5 /* oldBinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = oldBinaryTreeNode.hpp; sourceTree = "<group>"; };
-		97E8AC92208E22FD0071A10E /* N_AnyTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = N_AnyTreeNode.hpp; sourceTree = "<group>"; };
 		97F109142024BB630053D993 /* crime.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crime.csv; sourceTree = "<group>"; };
 		97F109192024C2620053D993 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				972899B3202A004200128555 /* ArrayTester.cpp */,
+				972899B4202A004200128555 /* ArrayTester.hpp */,
 				97564644205AB43800441812 /* SortingTester.cpp */,
 				97564645205AB43800441812 /* SortingTester.hpp */,
-				972899B4202A004200128555 /* ArrayTester.hpp */,
 				973FA6EB20BEF93C008F0E66 /* TestingStacksAndQueues.cpp */,
 				973FA6EC20BEF93C008F0E66 /* TestingStacksAndQueues.hpp */,
 				97B4155B206D3C8D00DA63BD /* BinaryTreeTester.cpp */,
@@ -124,11 +122,9 @@
 		972899B6202A10BA00128555 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				97E81615206A934B00F93DE5 /* oldBinaryTreeNode.hpp */,
 				972899B8202A119800128555 /* Node.hpp */,
 				977D73E9203C710400DD4871 /* LinearNode.hpp */,
 				977FDDB520937469004210D9 /* HashNode.hpp */,
-				97E8AC92208E22FD0071A10E /* N_AnyTreeNode.hpp */,
 				97780AAB20445FDA0077FFF8 /* DoubleNode.hpp */,
 				9783E1F120B86C6800352F1E /* BinaryTreeNode.hpp */,
 			);
@@ -169,7 +165,6 @@
 				972899B22029FFA600128555 /* Testers */,
 				97F109162024C15B0053D993 /* Model */,
 				97A3917D2022269B00E54C2B /* Data */,
-				97A3917320220C4C00E54C2B /* Runner.cpp */,
 				97A3917520220C5900E54C2B /* Controller */,
 			);
 			path = DataStructures;
@@ -178,6 +173,7 @@
 		97A3917520220C5900E54C2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				97A3917320220C4C00E54C2B /* Runner.cpp */,
 				97A3917A2022216900E54C2B /* FileController.cpp */,
 				97A3917B2022216900E54C2B /* FileController.hpp */,
 				97A3917120220C2800E54C2B /* Controller.hpp */,

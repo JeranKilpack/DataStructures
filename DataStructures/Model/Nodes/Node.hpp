@@ -10,21 +10,26 @@
 #ifndef Node_hpp
 #define Node_hpp
 
-template<class Type>
+#include <iostream>
+//#include
+template <class Type>
 class Node
 {
 protected:
     Type data;
+    
 public:
     Node();
     Node(Type data);
-    void setData(Type data);
+    void  setData(Type data);
     Type getData();
 };
 
-template <class Type>
-Node<Type> :: Node()
+template < class Type>
+Node<Type>:: Node()
 {
+    //Needed for default constructor complication
+    //Since when we create a structure it does not have an item to store yet.
 }
 
 template <class Type>
@@ -44,7 +49,4 @@ Type Node<Type> :: getData()
 {
     return data;
 }
-
-
-
 #endif /* Node_hpp */

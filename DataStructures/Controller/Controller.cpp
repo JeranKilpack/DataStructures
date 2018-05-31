@@ -22,17 +22,6 @@ Controller:: Controller()
 
 void Controller:: start()
 {
-    //testTimer();
-    //    cout << "Testing the Timer class" << endl;
-    //    Timer codeTimer;
-    //    codeTimer.startTimer();
-    //    vector<CrimeData> myData = FileController:: readCrimeDataToVector("/Users/bmor9741/Documents/Data Structures/DataStructures/DataStructures/Data/crimes.csv");
-    //    for(int loop = 200; loop < 216; loop++)
-    //    {
-    //        cout << "Spot# "<< loop << "; " << myData[loop] << endl;
-    //    }
-    //    codeTimer.stopTimer();
-    //    codeTimer.displayInformation();
     
     //    ArrayTester  myTest;
     //    myTest.testArrayBuild();
@@ -53,10 +42,10 @@ void Controller:: start()
    // GraphTester test;
    // test.testGraphs();
     
-    //    BinaryTreeTester test;
-    //    test.testNodes();
-    //    test.doTreeStuff();
-    //
+        BinaryTreeTester test;
+        test.testNodes();
+        test.doTreeStuff();
+    
     
 }
 
@@ -83,7 +72,7 @@ void Controller:: findMaxAndMin()
 {
     Timer searchTimer;
     searchTimer.startTimer();
-    vector<CrimeData> myData = FileController:: readCrimeDataToVector("/Users/bmor9741/Documents/Data Structures/DataStructures/DataStructures/Data/crimes.csv");
+    vector<CrimeData> myData = FileController:: readCrimeDataToVector("/Users/jkil3536/Documents/Data Structures/DataStructures/DataStructures/Data/crimes.csv");
     
     int minIndex = 0;
     int maxIndex = 0;

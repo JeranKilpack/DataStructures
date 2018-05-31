@@ -10,9 +10,10 @@
 #define FileController_hpp
 
 #include "../Data/CrimeData.hpp"
-
+#include "../Model/Structures/Linear/LinkedList.hpp"
+#include "../Testers/LinkedListTester.hpp"
+#include "../Model/Structures/NonLinear/AVLTree.hpp"
 #include <string>
-#include "/Users/jkil3536/Documents/Data Structures/DataStructures/DataStructures/Model/Structures/Linear/LinkedList.hpp"
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -24,7 +25,7 @@ class FileController
 {
 public:
     static vector<CrimeData> readCrimeDataToVector(string filename);
-    static LinkedList<CrimeData> readDataToList(string filename);
+    static LinkedList<CrimeData> readDataToList(string fileName);
 };
 
 #endif /* FileController_hpp */
