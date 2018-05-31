@@ -6,85 +6,109 @@
 //  Copyright © 2018 CTEC. All rights reserved.
 //
 
-#ifndef BinaryTreeNode_hpp
-#define BinaryTreeNode_hpp
+#ifndef Stack_hpp
+#define Stack_hpp
 
-#include <iostream>
-#include "Node.hpp"
+#include "LinkedList.hpp"
 
 template <class Type>
-class BinaryTreeNode : public Node<Type>
+class Stack : public LinkedList<Type>
 {
-private:
-    BinaryTreeNode<Type> * root;
-    BinaryTreeNode<Type> * left;
-    BinaryTreeNode<Type> * right;
-    
 public:
-    BinaryTreeNode();
-    BinaryTreeNode(Type data);
+    Stack();
+    ~Stack();
     
-    BinaryTreeNode<Type> * getRootNode();
-    BinaryTreeNode<Type> * getLeftNode();
-    BinaryTreeNode<Type> * getRightNode();
+    //Stack specific methods
+    void push(Type data);
+    Type pop();
+    Type peek();
     
-    void setRootNode(BinaryTreeNode<Type> * root);
-    void setLeftNode(BinaryTreeNode<Type> * left);
-    void setRightNode(BinaryTreeNode<Type> * right);
-    
+    //Overrriden LinkedList methods
+    void add(Type data);
+    void addAtIndex(int index, Type data);
+    Type getFromIndex(int index);
+    Type remove(int index);
 };
 
-template<class Type>
-BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
+template <class Type>
+Stack<Type> :: Stack() : LinkedList<Type>()
 {
-    root = nullptr;
-    left = nullptr;
-    right = nullptr;
+    //Empty
+}
+
+template <class Type>
+Stack<Type> :: ~Stack()
+{
+    while(this->size > 0)
+    {
+        pop();
+    }
+}
+
+template <class Type>
+void Stack<Type> :: push(Type data)
+{
+    LinearNode<Type> * add = new LinearNode<Type>(data);
+    
+    if(this->size == 0)
+    {
+        this->end = add;
+    }
+    else
+    {
+        add->setNextNode(this->front);
+    }
+    
+    this->front = add;
+    this->size++;
 }
 
 template<class Type>
-BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
+void Stack<Type> :: add(Type data)
 {
-    root = nullptr;
-    left = nullptr;
-    right = nullptr;
+    push(data);
 }
 
-template<class Type>
-void BinaryTreeNode<Type> :: setRootNode(BinaryTreeNode<Type> * root)
+template <class Type>
+void Stack<Type> :: addAtIndex(int index, Type data)
 {
-    this->root = root;
+    assert(index == 0);
+    push(data);
 }
 
-template<class Type>
-void BinaryTreeNode<Type> :: setLeftNode(BinaryTreeNode<Type> * left)
+template <class Type>
+Type Stack<Type> :: pop()
 {
-    this->left = left;
+    assert (this->size > 0);
+    Type removed = this->front->getData();
+    
+    LinearNode<Type> * removedNode = this->getFront();
+    this->front = removedNode->getNextNode();
+    delete removedNode;
+    
+    this->size--;
+    
+    return removed;
 }
 
-template<class Type>
-void BinaryTreeNode<Type> :: setRightNode(BinaryTreeNode<Type> * right)
+template <class Type>
+Type Stack<Type> :: remove(int index)
 {
-    this->right = right;
+    assert(index == 0);
+    return pop();
 }
 
-template<class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRootNode()
+template <class Type>
+Type Stack<Type> :: peek()
 {
-    return root;
+    assert(this->size > 0);
+    return this->getFront()->getData();
 }
 
-template<class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftNode()
+template <class Type>
+Type Stack<Type> :: getFromIndex(int index)
 {
-    return left;
+    assert(index == 0);
+    return peek();
 }
-
-template<class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightNode()
-{
-    return right;
-}
-
-#endif
-
+#endif 
